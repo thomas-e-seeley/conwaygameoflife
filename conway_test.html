@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>QUnit basic example</title>
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+</head>
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+  <script src="conway.js"></script>
+  <script>
+	QUnit.test( "a board can be created", function( assert ) {
+		var rows = 5;
+		var cols = 7;
+		var board = conway.createBoard(rows, cols);
+		assert.ok( board, "board is to be created (non-null)");
+		assert.equal( rows, board.length, "board is to have specified number of rows");
+		assert.equal( cols, board[0].length, "board is to have specified number of columns");
+	});
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* conway.css */
+fieldset.ex {
+	display: inline-block;
+	width:250px;
+}
+label.ex {
+	float:left;
+	width:160px;
+}
+input.ex {
+	text-align:right;
+	width:60px;
+}
+table {
+	border: 1px solid black;
+}
+td {
+	width:16px;
+	height:16px;
+}
+td.dead {
+	background-color:ghostwhite;
+}
+td.live {
+	background-color:black;
+}

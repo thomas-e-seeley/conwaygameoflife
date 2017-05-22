@@ -1,0 +1,42 @@
+<!-- Conway's Game of Life -->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset = "utf-8">
+	<title>Conway&#39;s Game of Life</title>
+	<link rel="stylesheet" href="conway.css">
+</head>
+
+<body onload="ConwayOnload()">
+	<h2>Conway&#39;s Game of Life</h2>
+	<form id="_form">
+		<div><fieldset class="ex">
+			<legend>Configuration:</legend>
+			<div><label class="ex" for="_height">Number of rows</label>
+			<input class="ex" id="_height" type="number" value="16" min="4" 
+				onchange="updateRows()" required>
+			</div>
+			<div><label class="ex" for="_width">Number of columns</label>
+			<input class="ex" id="_width" type="number" value="18" min="4" 
+				onchange="updateCols()" required>
+			</div>
+			<div><label class="ex" for="_steps">Number of iterations</label>
+			<input class="ex" id="_steps" type="number" value="9" min="1" required>
+			</div>
+
+		</fieldset></div>
+		<div><fieldset class="ex">
+			<legend>Control:</legend>
+			<input type="button" id="startstop" value="Start" 
+				onclick="runIterations()">
+		</fieldset></div>
+	</form>
+	<br>
+	<div id="_hint">Click on squares below to change their state</div>
+	<table id="gameboard" onclick="flipCellState(event)">
+		<!-- table data is inserted later by programming -->
+	</table>
+	<script src="conway.js"></script>
+	<script src="callbacks.js"></script>
+</body>
+</html>
